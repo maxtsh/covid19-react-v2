@@ -1,0 +1,27 @@
+{
+	"compileOnSave": false,
+	"allowSyntheticDefaultImports": true,
+	"esModuleInterop": true,
+	"compilerOptions": {
+		"declaration": false,
+		"sourceMap": true,
+		"jsx": "react-jsx",
+		"module": "esnext",
+		"allowJs": true,
+		"target": "es2015",
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"baseUrl": ".",
+		"paths": {
+			"Components/*": ["app/components/*"],
+			"Containers/*": ["app/containers/*"],
+			"Utils/*": ["utils/*"],
+			"Styles/*": ["app/styles/*"]
+		}
+	},
+	"include": [
+		"./"
+	],
+	"exclude": ["node_modules"] 
+}
