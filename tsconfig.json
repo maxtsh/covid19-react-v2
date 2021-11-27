@@ -1,27 +1,32 @@
 {
-	"compileOnSave": false,
-	"allowSyntheticDefaultImports": true,
-	"esModuleInterop": true,
-	"compilerOptions": {
-		"declaration": false,
-		"sourceMap": true,
-		"jsx": "react-jsx",
-		"module": "esnext",
-		"allowJs": true,
-		"target": "es2015",
-		"moduleResolution": "node",
-		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true,
-		"baseUrl": ".",
-		"paths": {
-			"Components/*": ["app/components/*"],
-			"Containers/*": ["app/containers/*"],
-			"Utils/*": ["utils/*"],
-			"Styles/*": ["app/styles/*"]
-		}
-	},
-	"include": [
-		"./"
-	],
-	"exclude": ["node_modules"] 
+  "compileOnSave": true,
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es5" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "jsx": "react-jsx" /* Specify what JSX code is generated. */,
+    /* Modules */
+    "module": "esnext" /* Specify what module code is generated. */,
+    "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
+    "baseUrl": "." /* Specify the base directory to resolve non-relative module names. */,
+    "paths": {
+      "components/*": ["app/components/*"],
+      "containers/*": ["app/containers/*"],
+      "utils/*": ["utils/*"],
+      "styles/*": ["app/styles/*"]
+    },
+    /* JavaScript Support */
+    "allowJs": true /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */,
+    "checkJs": true /* Enable error reporting in type-checked JavaScript files. */,
+    /* Emit */
+    "declaration": false /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
+    "sourceMap": true /* Create source map files for emitted JavaScript files. */,
+    "allowSyntheticDefaultImports": true /* Allow 'import x from y' when a module doesn't have a default export. */,
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    /* Type Checking */
+    "strict": true /* Enable all strict type-checking options. */,
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+  },
+  "include": ["./"],
+  "exclude": ["node_modules"]
 }

@@ -1,25 +1,26 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Routes from 'Containers/app/Routes';
-import GlobalStyle from 'Styles/GlobalStyles';
-import { Container } from './styles';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AllRoutes from "containers/app/Routes";
+import GlobalStyle from "styles/GlobalStyles";
+import { Container } from "./styles";
+import { RouteType } from "./Routes/types";
+import "rsuite/dist/rsuite.min.css";
 
 const App: React.FC = () => {
-    return (
-      <Router>
-        <Container>
-          <Switch>
-            {Routes.map(route => 
-              <Route 
-                  key={route.name}
-                  exact={route.exact} 
-                  path={route.path} 
-                  component={route.component} 
-              />
-            )}
-          </Switch>
-        </Container>
-        <GlobalStyle />
-      </Router>
-    )
-}
+  return (
+    <Router>
+      <Container>
+        <Routes>
+          {AllRoutes.map((route: RouteType) => (
+            <Route
+              key={route.name}
+              path={route.path}
+              element={<route.component />}
+            />
+          ))}
+        </Routes>
+      </Container>
+      <GlobalStyle />
+    </Router>
+  );
+};
 export default App;
